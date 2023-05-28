@@ -1,4 +1,7 @@
-﻿namespace TaskManagement.Api;
+﻿using MediatR;
+using Microsoft.EntityFrameworkCore;
+
+namespace TaskManagement.Api;
 
 public class Program
 {
@@ -7,7 +10,8 @@ public class Program
         var builder = WebApplication.CreateBuilder(args);
 
         // Add services to the container.
-
+       
+        builder.Services.AddMediatR(typeof(Program));
         builder.Services.AddControllers();
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
