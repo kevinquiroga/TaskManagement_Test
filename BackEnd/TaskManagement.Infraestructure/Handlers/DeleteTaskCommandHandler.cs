@@ -1,6 +1,6 @@
 ﻿using MediatR;
 using TaskManagement.Infraestructure.Persistence;
-using static TaskManagement.Infraestructure.Commands.Commands;
+using static TaskManagement.Application.Commands.Commands;
 
 namespace TaskManagement.Infraestructure.Handlers
 {

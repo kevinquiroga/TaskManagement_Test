@@ -3,27 +3,20 @@ using System.Threading;
 using MediatR;
 using TaskManagement.Domain.Entities;
 
-namespace TaskManagement.Infraestructure.Commands
+namespace TaskManagement.Application.Commands
 {
 	public class Commands
 	{
         public class CreateTaskCommand : IRequest<int>
         {
             public TaskDTO Task { get; set; }
-            //public string Name { get; set; }
-            //public string Description { get; set; }
-            //public StateTask State { get; set; }
-            //public DateTime CreateDate { get; set; }
+       
         }
         public class UpdateTaksCommand : IRequest
         {
             public int IdTask { get; set; }
             public TaskDTO Task { get; set; }
-            //public int IdTask { get; set; }
-            //public string Name { get; set; }
-            //public string Description { get; set; }
-            //public StateTask State { get; set; }
-            //public DateTime CreateDate { get; set; }
+ 
         }
         public class DeleteTaskCommand : IRequest
         {
