@@ -10,9 +10,9 @@ namespace TaskManagement.Infraestructure.Persistence
       
         public DbSet<TaskDTO> TaskPersistence { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+       
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-            optionsBuilder.UseSqlServer(@"Server=tcp:sqlserver12.database.windows.net,1433;Initial Catalog=TaskManagement;Persist Security Info=False;User ID=kaquiroga;Password=Espe2023.;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
