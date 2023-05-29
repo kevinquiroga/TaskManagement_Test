@@ -5,7 +5,7 @@ using static TaskManagement.Application.Commands.Commands;
 
 namespace TaskManagement.Infraestructure.Handlers
 {
-	public class UpdateTaskCommandHandler: IRequestHandler<UpdateTaksCommand>
+	public class UpdateTaskCommandHandler: IRequestHandler<UpdateTaksCommand,Unit>
     {
         private readonly ApplicationDbContext _dbContext;
         public UpdateTaskCommandHandler(ApplicationDbContext dbContext)

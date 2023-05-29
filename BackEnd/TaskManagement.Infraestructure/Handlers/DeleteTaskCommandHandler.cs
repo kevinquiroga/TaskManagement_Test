@@ -4,7 +4,7 @@ using static TaskManagement.Application.Commands.Commands;
 
 namespace TaskManagement.Infraestructure.Handlers
 {
-	public class DeleteTaskCommandHandler: IRequestHandler<DeleteTaskCommand>
+	public class DeleteTaskCommandHandler: IRequestHandler<DeleteTaskCommand,Unit>
     {
         private readonly ApplicationDbContext _dbContext;
         public DeleteTaskCommandHandler(ApplicationDbContext dbContext)
