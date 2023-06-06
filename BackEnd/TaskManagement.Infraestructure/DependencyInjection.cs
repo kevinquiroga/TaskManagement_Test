@@ -20,7 +20,7 @@ namespace TaskManagement.Infraestructure
           
 
             services.AddDbContext<ApplicationDbContext>(options =>
-            options.UseSqlServer("Server=tcp:sqlserver12.database.windows.net,1433;Initial Catalog=TaskManagement;Persist Security Info=False;User ID=kaquiroga;Password=Espe2023.;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;"));
+            options.UseSqlServer(""));
 
             services.AddMediatR(typeof(Commands));
             services.AddScoped<IRequestHandler<CreateTaskCommand, int>, CreateTaskCommandHandler>();
